@@ -1,0 +1,261 @@
+@font-face {
+  font-family: RadioCanada;
+  src: url("/fonts/RadioCanada-Regular.ttf");
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+:root {
+  --color: #02C940;
+  --d-color: #08C342;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: RadioCanada;
+}
+
+body {
+  background: #121212;
+}
+
+h1 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  background-image: url("/images/low-poly-grid-haikei(1).png");
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  text-align: center;
+  animation: back 25s linear infinite;
+}
+
+@keyframes back {
+  0% {
+    background-position: 100% 00%;
+    background-size: 125%;
+  }
+
+  100% {
+    background-position: 00% 100%;
+    background-size: 300%;
+  }
+}
+
+.mainConvert {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subConvert {
+  width: 90%;
+  height: 320px;
+  background: #0B0D0B;
+  box-shadow: .1px .1px 5px #636363 inset;
+  border-radius: 10px;
+}
+
+.valueOfMoney {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inpVal {
+  width: 55%;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--color);
+  background: none;
+  outline: none;
+  color: #30C12B;
+  transition: 0.8s;
+}
+
+.inpVal:focus {
+  width: 90%;
+  border-radius: 0;
+}
+
+.convertFrom,
+.convertTo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toSection {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--d-color);
+  font-size: 1.5rem;
+}
+
+.line,
+.lineSec {
+  width: 35%;
+  height: 0.5px;
+  background: var(--color);
+}
+
+.selFrom,
+.selTo {
+  width: 80%;
+  height: 40px;
+  background: none;
+  border: 0.2px solid var(--d-color);
+  outline: none;
+  color: #68D464;
+  padding: 0 0px 0 5px;
+  border-radius: 5px;
+}
+
+.buttonSubmit {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 60%;
+  height: 45px;
+  background: none;
+  border: 1px solid var(--d-color);
+  border-radius: 50px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  z-index: 555;
+}
+
+.btn:hover .emptySpan:after {
+  transform: scale(39);
+  border-radius: 50%;
+}
+
+.emptySpan:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--d-color);
+  top: 40%;
+  left: 48%;
+  transform: scale(00);
+  transition: 0.7s;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.resultConvert {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.resultSubConvert {
+  width: 90%;
+  height: 200px;
+  background: #0B0D0B;
+  box-shadow: .1px .1px 5px #636363 inset;
+  border-radius: 5px;
+  color: var(--d-color);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.bar-style {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar-main {
+  width: 80px;
+  height: 5px;
+  background: #3C3C3C;
+  border-radius: 5px;
+}
+.text {
+  
+}
+.warnEmpty,.warnEmptyField {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  transform: translateY(100px);
+  transition: 0.8s;
+}
+.warnEmToggle {
+  transform: translateY(0);
+}
+.warnEmptySub,.warnEmptyFSub {
+  width: 85%;
+  height: 50px;
+  background: var(--d-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: .1px .1px 5px #000;
+}
+
+.convertFromSec,.convertFromOne {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.convertFromSecSub,.convertFromOneSub {
+  width: 90%;
+  height: 40px;
+  background: var(--d-color);
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.currencyTypeOne,.currencyTypeSec {
+  margin: 0 0 0 10px;
+}
+.currencyTypePrize,.currencyTypePrizeSec {
+  margin: 0 10px 0 0;
+}
+.text {
+  margin: 10px 0;
+}
