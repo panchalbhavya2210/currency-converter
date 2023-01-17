@@ -1,3 +1,5 @@
+$("#toConvert").select2();
+$("#forConvert").select2();
 let btn = document.getElementById("submit");
 
 btn.addEventListener("click", convert);
